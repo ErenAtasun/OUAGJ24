@@ -16,26 +16,26 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         GetComponent<SpriteRenderer>().sprite = sprite1;
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.localScale = new Vector3(1.5f, 1.7f, 1);
     }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             GetComponent<SpriteRenderer>().sprite = sprite1;
-            transform.localScale = new Vector3(1, 1, 1); 
+            transform.localScale = new Vector3(1.5f, 1.7f, 1); 
             canJump = true;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             GetComponent<SpriteRenderer>().sprite = sprite2;
-            transform.localScale = new Vector3(0.5f, 0.5f, 1); 
+            transform.localScale = new Vector3(1f, 1f, 1); 
             canJump = false; 
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             GetComponent<SpriteRenderer>().sprite = sprite3;
-            transform.localScale = new Vector3(2f, 2f, 1);
+            transform.localScale = new Vector3(3f, 3f, 1);
             canJump = false;
         }
 
