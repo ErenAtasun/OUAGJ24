@@ -24,6 +24,7 @@ public class LivesControl : MonoBehaviour
                 break;
             case 0:
                 SceneManager.LoadScene("GameOver");
+                Score.lives = 3;
                 break;
         }
     }
