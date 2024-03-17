@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LivesControl : MonoBehaviour
 {
@@ -21,8 +22,8 @@ public class LivesControl : MonoBehaviour
                 gameObject.transform.GetChild(2).gameObject.SetActive(false);
                 gameObject.transform.GetChild(1).gameObject.SetActive(false);
                 break;
-            default:
-                Score.lives = 3;
+            case 0:
+                SceneManager.LoadScene("GameOver");
                 break;
         }
     }
