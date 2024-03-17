@@ -8,7 +8,8 @@ public class CharacterMovement : MonoBehaviour
     public float jumpForce = 5f;
     public Rigidbody2D rb;
     public Sprite sprite1; 
-    public Sprite sprite2; 
+    public Sprite sprite2;
+    public Sprite sprite3;
 
     bool jump = false;
     bool canJump = true; 
@@ -30,6 +31,12 @@ public class CharacterMovement : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = sprite2;
             transform.localScale = new Vector3(0.5f, 0.5f, 1); 
             canJump = false; 
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            GetComponent<SpriteRenderer>().sprite = sprite3;
+            transform.localScale = new Vector3(2f, 2f, 1);
+            canJump = false;
         }
 
         float HorizontalMove = Input.GetAxis("Horizontal");
